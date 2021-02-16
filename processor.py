@@ -11,5 +11,5 @@ print(onlyfiles)
 for f in onlyfiles:
     f_no_extension = f.split(".")[0]
     string_command = "ffmpeg -i original/{} processed/{}.mp3"
-    command = f(string_command)
+    command = f"ffmpeg -i original/{f} processed/{f_no_extension}.mp3"
     os.system(command)
