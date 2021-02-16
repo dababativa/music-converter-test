@@ -4,7 +4,7 @@ from os import listdir
 from os.path import isfile, join
 
 
-onlyfiles = [f for f in listdir('unprocessed/') if isfile(join('unprocessed/', f))]
+onlyfiles = [f for f in listdir('processed/') if isfile(join('processed/', f))]
 
 print(onlyfiles)
 
