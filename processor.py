@@ -9,7 +9,7 @@ onlyfiles = [f for f in listdir('unprocessed/') if isfile(join('unprocessed/', f
 print(onlyfiles)
 
 for f in onlyfiles:
-    no_extension_name = f.split(".")[0]
-    command = f"ffmpeg -i original/{} processed/{}.mp3".format(f,no_extension_name)
-    print(command)
+    f_no_extension = f.split(".")[0]
+    string_command = "ffmpeg -i original/{} processed/{}.mp3"
+    command = f(string_command)
     os.system(command)
