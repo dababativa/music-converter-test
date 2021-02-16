@@ -12,6 +12,6 @@ for f in onlyfiles:
     f_no_extension = f.split(".")[0]
     string_command = "ffmpeg -i original/{} processed/{}.mp3"
     print(string_command, "String")
-    command = f"ffmpeg -i ./original/{f} ./processed/{f_no_extension}.wav"
+    command = f"ffmpeg -i unprocessed/{f} ./processed/{f_no_extension}.wav"
     print(command)
     os.system(command)
